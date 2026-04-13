@@ -1,0 +1,13 @@
+# Local .terraform directory (provider binaries, modules)
+.terraform/
+
+# State files (will live in S3 instead)
+*.tfstate
+*.tfstate.backup
+
+# Vars file may contain secrets
+*.tfvars
+
+# Crash log files
+crash.log
+crash.*.log
