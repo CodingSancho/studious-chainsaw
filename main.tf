@@ -114,6 +114,7 @@ resource "aws_instance" "web" {
     Name        = "web-${var.student_name}"
     Environment = var.environment
     ManagedBy   = "terraform"
+    CiCdTest    = "true"
   }
 }
 
