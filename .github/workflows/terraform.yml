@@ -25,14 +25,14 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: eu-central-1
+          aws-region: us-east-1
 
       - name: Terraform init
         run: terraform init
 
       - name: Terraform plan
         id: plan
-        run: terraform plan -no-color -out=tfplan
+        run: terraform plan -no-color -var-file="terraform.tfvars" -out=tfplan
 
       - name: Post plan to PR
         if: github.event_name == 'pull_request'
