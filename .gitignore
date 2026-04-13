@@ -5,9 +5,6 @@
 *.tfstate
 *.tfstate.backup
 
-# Vars file may contain secrets
-*.tfvars
-
 # Crash log files
 crash.log
 crash.*.log
